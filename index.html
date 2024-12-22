@@ -17,18 +17,12 @@
             min-height: 100vh;
         }
 
-        h1, p {
-            text-align: center;
-            margin: 10px 0;
-            padding: 0 15px;
-        }
-
         iframe {
             border: none;
-            width: 90%;
-            max-width: 1200px;
+            width: 100%;
+            max-width: 1920px;
             height: calc(100vh - 150px); /* Ajuste dinâmico */
-            max-height: 800px;
+            max-height: 1080px;
         }
 
         @media (max-width: 768px) {
@@ -46,8 +40,6 @@
     </style>
 </head>
 <body>
-    <h1>Planilha Interativa</h1>
-    <p>Edite os dados diretamente na planilha abaixo:</p>
     
     <!-- Exibindo planilha no iframe -->
     <iframe src="https://docs.google.com/spreadsheets/d/19_EClXxIqm6fnRNKcy9DZs9RUfDkRJRTvltLxMIQbUs/edit?usp=sharing&rm=minimal&single=true&widget=true&headers=false&chrome=false"></iframe>
