@@ -40,8 +40,21 @@
     </style>
 </head>
 <body>
-    
-    <!-- Exibindo planilha no iframe -->
-    <iframe src="https://docs.google.com/spreadsheets/d/19_EClXxIqm6fnRNKcy9DZs9RUfDkRJRTvltLxMIQbUs/edit?usp=sharing&rm=minimal&single=true&widget=true&headers=false&chrome=false"></iframe>
+    <div id="iframe-container"></div> <!-- Container para carregar o iframe -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const iframe = document.createElement("iframe");
+            iframe.src = "https://docs.google.com/spreadsheets/d/19_EClXxIqm6fnRNKcy9DZs9RUfDkRJRTvltLxMIQbUs/edit?usp=sharing&rm=minimal&single=true&widget=true&headers=false&chrome=false";
+            iframe.style.border = "none";
+            iframe.style.width = "100%";
+            iframe.style.maxWidth = "1920px";
+            iframe.style.height = "calc(100vh - 150px)";
+            iframe.style.maxHeight = "1080px";
+
+            const container = document.getElementById("iframe-container");
+            container.appendChild(iframe);
+        });
+    </script>
 </body>
 </html>
